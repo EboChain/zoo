@@ -58,7 +58,7 @@ jobs:
         run: |
           cd build/dir
           make check || (cat test/test-suite.log; false)
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.compiler }}-test-logs
           path: build/dir/test/*.log
